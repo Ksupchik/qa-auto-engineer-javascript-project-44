@@ -9,3 +9,6 @@
 
 ### Asclinema for brain-gcd:
 [![asciicast](https://asciinema.org/a/7HXP8LLHm6dsuuu1.svg)](https://asciinema.org/a/7HXP8LLHm6dsuuu1)
+
+### Asclinema for brain-progression:
+[![asciicast](https://asciinema.org/a/9bnHZuyXAgbSONME.svg)](https://asciinema.org/a/9bnHZuyXAgbSONME)
