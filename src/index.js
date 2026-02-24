@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync'
 
-const requiredWins = 3
+const rounds = 3
 
 export const runGame = (game) => {
   console.log('Welcome to the Brain Games!')
@@ -8,9 +8,7 @@ export const runGame = (game) => {
   console.log(`Hello, ${name}!`)
   console.log(game.description)
 
-  let wins = 0
-
-  while (wins < requiredWins) {
+  for (let i = 0; i < rounds; i++) {
     const { question, answer } = game.run()
     console.log(`Question: ${question}`)
 
@@ -19,11 +17,10 @@ export const runGame = (game) => {
     if (userAnswer !== answer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`)
       console.log(`Let's try again, ${name}!`)
-      wins = 0
+      return
     }
     else {
       console.log('Correct!')
-      wins += 1
     }
   }
 
