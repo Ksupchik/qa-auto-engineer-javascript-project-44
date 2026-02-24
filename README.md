@@ -6,3 +6,6 @@
 
 ### Asclinema for brain-calc:
 [![asciicast](https://asciinema.org/a/P8brAJ2HBBReqoNO.svg)](https://asciinema.org/a/P8brAJ2HBBReqoNO)
+
+### Asclinema for brain-gcd:
+[![asciicast](https://asciinema.org/a/7HXP8LLHm6dsuuu1.svg)](https://asciinema.org/a/7HXP8LLHm6dsuuu1)
