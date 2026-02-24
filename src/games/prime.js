@@ -14,7 +14,7 @@ const isPrime = (num) => {
   return true
 }
 
-const description = 'Answer "yes" if given number is prime, otherwise answer "no".'
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 const run = () => {
   const number = getRandomNumber(1, 100)
