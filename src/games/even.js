@@ -1,3 +1,4 @@
+import { runGame } from '../index.js'
 import { getRandomNumber } from '../helpers.js'
 
 const isEven = num => num % 2 === 0
@@ -15,7 +16,4 @@ const run = () => {
   }
 }
 
-export const brainEven = {
-  description,
-  run,
-}
+export default () => runGame({ description, run })

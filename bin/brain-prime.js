@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import { brainPrime } from '../src/games/prime.js'
-import { runGame } from '../src/index.js'
+import run from '../src/games/prime.js'
 
-runGame(brainPrime)
+run()

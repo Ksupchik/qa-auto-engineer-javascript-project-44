@@ -1,3 +1,4 @@
+import { runGame } from '../index.js'
 import { getRandomNumber } from '../helpers.js'
 
 const getGcd = (a, b) => {
@@ -18,7 +19,4 @@ const run = () => {
   }
 }
 
-export const brainGcd = {
-  description,
-  run,
-}
+export default () => runGame({ description, run })

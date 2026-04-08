@@ -1,3 +1,4 @@
+import { runGame } from '../index.js'
 import { getRandomNumber } from '../helpers.js'
 
 const getRandomOperator = () => {
@@ -7,23 +8,16 @@ const getRandomOperator = () => {
 }
 
 const calc = (number1, number2, operator) => {
-  let result = ''
-
   switch (operator) {
     case '+':
-      result = number1 + number2
-      break
+      return number1 + number2
 
     case '-':
-      result = number1 - number2
-      break
+      return number1 - number2
 
     case '*':
-      result = number1 * number2
-      break
+      return number1 * number2
   }
-
-  return result
 }
 
 const description = 'What is the result of the expression?'
@@ -42,4 +36,4 @@ const run = () => {
   }
 }
 
-export const brainCalc = { description, run }
+export default () => runGame({ description, run })

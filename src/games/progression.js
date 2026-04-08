@@ -1,3 +1,4 @@
+import { runGame } from '../index.js'
 import { getRandomNumber } from '../helpers.js'
 
 const generateProgression = (start, step, length, hiddenIndex) => {
@@ -24,7 +25,4 @@ const run = () => {
   }
 }
 
-export const brainProgression = {
-  description,
-  run,
-}
+export default () => runGame({ description, run })
