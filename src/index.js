@@ -19,9 +19,8 @@ export const runGame = (game) => {
       console.log(`Let's try again, ${name}!`)
       return
     }
-    else {
-      console.log('Correct!')
-    }
+
+    console.log('Correct!')
   }
 
   console.log(`Congratulations, ${name}!`)
