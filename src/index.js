@@ -9,13 +9,13 @@ export const runGame = (game) => {
   console.log(game.description)
 
   for (let i = 0; i < rounds; i++) {
-    const { question, answer } = game.run()
+    const { question, correctAnswer } = game.run()
     console.log(`Question: ${question}`)
 
     const userAnswer = readlineSync.question('Your answer: ')
 
-    if (userAnswer !== answer) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`)
+    if (userAnswer !== correctAnswer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
       console.log(`Let's try again, ${name}!`)
       return
     }

@@ -1,13 +1,11 @@
 import { runGame } from '../index.js'
 import { getRandomNumber } from '../helpers.js'
 
-const generateProgression = (start, step, length, hiddenIndex) => {
-  return Array.from({ length }, (_, i) => (
-    i === hiddenIndex ? '..' : start + i * step
-  )).join(' ')
-}
-
 const description = 'What number is missing in the progression?'
+
+const generateProgression = (start, step, length) => {
+  return Array.from({ length }, (_, i) => start + i * step)
+}
 
 const run = () => {
   const length = getRandomNumber(5, 15)
@@ -15,8 +13,11 @@ const run = () => {
   const step = getRandomNumber(1, 15)
 
   const hiddenIndex = getRandomNumber(0, length - 1)
+  const progression = generateProgression(startNum, step, length)
 
-  const question = generateProgression(startNum, step, length, hiddenIndex)
+  const question = progression
+    .map((num, i) => (i === hiddenIndex ? '..' : num))
+    .join(' ')
   const answer = String(startNum + step * hiddenIndex)
 
   return {

@@ -1,11 +1,8 @@
 import { runGame } from '../index.js'
 import { getRandomNumber } from '../helpers.js'
 
-const getRandomOperator = () => {
-  const operators = ['+', '-', '*']
-  const index = getRandomNumber(0, operators.length - 1)
-  return operators[index]
-}
+const operators = ['+', '-', '*']
+const description = 'What is the result of the expression?'
 
 const calc = (number1, number2, operator) => {
   switch (operator) {
@@ -17,15 +14,16 @@ const calc = (number1, number2, operator) => {
 
     case '*':
       return number1 * number2
+
+    default:
+      throw new Error('Unknown operator')
   }
 }
-
-const description = 'What is the result of the expression?'
 
 const run = () => {
   const number1 = getRandomNumber(1, 100)
   const number2 = getRandomNumber(1, 100)
-  const operator = getRandomOperator()
+  const operator = operators[getRandomNumber(0, operators.length - 1)]
 
   const question = `${number1} ${operator} ${number2}`
   const answer = String(calc(number1, number2, operator))

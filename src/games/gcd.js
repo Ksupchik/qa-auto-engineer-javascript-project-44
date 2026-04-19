@@ -1,11 +1,11 @@
 import { runGame } from '../index.js'
 import { getRandomNumber } from '../helpers.js'
 
+const description = 'Find the greatest common divisor of given numbers.'
+
 const getGcd = (a, b) => {
   return b === 0 ? a : getGcd(b, a % b)
 }
-
-const description = 'Find the greatest common divisor of given numbers.'
 
 const run = () => {
   const number1 = getRandomNumber(1, 100)
